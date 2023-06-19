@@ -3,21 +3,18 @@
 #include <time.h>
 
 int main() {
-    int n;
-    
     srand(time(NULL));
-    n = rand() % 201 - 100;  // Generate a random number between -100 and 100 */
-    
-    printf("The number is %d\n", n);
-    
+    int n = rand() % RAND_MAX;
+
+    printf("The number is: %d\n", n);
+
     if (n > 0) {
-        printf("%d is positive\n", n);
-    } else if (n < 0) {
-        printf("%d is negative\n", n);
+        printf("is positive\n");
+    } else if (n == 0) {
+        printf("is zero\n");
     } else {
-        printf("%d is zero\n", n);
+        printf("is negative\n");
     }
-    
-    printf("\n");
+
     return 0;
 }
