@@ -4,7 +4,8 @@
 
 int main() {
     srand(time(NULL));
-    int n = rand() % RAND_MAX;
+    int n; // Declare the variable at the beginning of the block
+    n = rand() % RAND_MAX;
 
     printf("The number is: %d\n", n);
 
