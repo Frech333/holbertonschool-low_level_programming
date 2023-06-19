@@ -5,7 +5,6 @@
 int main() {
     int n;
     
-    /* Generate a random number and assign it to n */
     srand(time(NULL));
     n = rand() %RAND_MAX;
 
