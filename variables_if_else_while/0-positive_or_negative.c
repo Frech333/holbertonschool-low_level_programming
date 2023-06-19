@@ -6,7 +6,7 @@ int main() {
     int n;
     
     srand(time(NULL));
-    n = rand() % RAND_MAX;
+    n = rand() % 201 - 100; // Generate a random number betwen -100 and 100
     
     printf("The number is %d\n", n);
     
