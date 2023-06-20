@@ -14,18 +14,20 @@ int main(void)
 {
 	int n;
 
-	srand(time(0)); /* Seed the random number generator with current time */
-
-	n = rand() % 201 - 100; /* Generate a random number between -100 and 100 */
+	srand(time(0)); 
+	n = rand() - RAND_MAX / 2;
 
 	if (n > 0)
-		printf("is positive");
+	{
+	printf("%d is positive\n", n);
+	}
 	else if (n == 0)
-		printf("is zero");
+	{
+	printf("%d is zero\n", n);
+	}
 	else
-		printf("is negative");
-
-	printf("\n");
-
+	{
+	printf("%d is negative\n", n);
+	}
 	return (0);
 }
