@@ -11,9 +11,9 @@ int main(void)
 
 	for (num = 0; num < 10; num++)
 	{
-		putchar(num + '0');
+		write(1, &num, 1);
 	}
-	putchar('\n');
+	write(1, "\n", 1);
 
 	return (0);
 }
