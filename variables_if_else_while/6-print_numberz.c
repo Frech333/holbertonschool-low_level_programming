@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include <stdio.h>
 
 void print_number(int num) {
     if (num == 0) {
