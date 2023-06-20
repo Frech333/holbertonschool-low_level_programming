@@ -2,7 +2,7 @@
 
 int _putchar(char c); // Declaration of the _putchar function
 
-/**
+/*
  * print_alphabet - Make the alphabet
  * Return: void
  */
