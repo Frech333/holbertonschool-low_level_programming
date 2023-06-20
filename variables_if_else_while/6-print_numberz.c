@@ -1,35 +1,35 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int main(void) {
-    putchar('0');
-    putchar('\n');
+void print_number(int num) {
+    if (num == 0) {
+        putchar('0');
+        return;
+    }
 
-    putchar('1');
-    putchar('\n');
+    if (num < 0) {
+        putchar('-');
+        num = -num;
+    }
 
-    putchar('2');
-    putchar('\n');
+    int digits[10];
+    int count = 0;
 
-    putchar('3');
-    putchar('\n');
+    while (num > 0) {
+        digits[count] = num % 10;
+        num /= 10;
+        count++;
+    }
 
-    putchar('4');
-    putchar('\n');
+    for (int i = count - 1; i >= 0; i--) {
+        putchar('0' + digits[i]);
+    }
+}
 
-    putchar('5');
-    putchar('\n');
-
-    putchar('6');
-    putchar('\n');
-
-    putchar('7');
-    putchar('\n');
-
-    putchar('8');
-    putchar('\n');
-
-    putchar('9');
-    putchar('\n');
+int main() {
+    for (int i = 0; i < 10; i++) {
+        print_number(i);
+        putchar('\n');
+    }
 
     return 0;
 }
