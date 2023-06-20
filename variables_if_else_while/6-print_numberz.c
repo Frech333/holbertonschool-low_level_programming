@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -11,5 +11,5 @@ int main(void)
 		num++;
 	}
 	putchar('\n');
-	return (0);
+	return 0;
 }
