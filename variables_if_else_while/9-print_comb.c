@@ -1,33 +1,26 @@
 #include <stdio.h>
+#include <stdlib.h
+#include <time.h>
 
-int main(void)
+/**
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
+
+int main (void)
+  
 {
-    int i, j, k, l;
+  int d;
 
-    for (i = 0; i <= 9; i++)
-    {
-        for (j = i + 1; j <= 9; j++)
-        {
-            for (k = j + 1; k <= 9; k++)
-            {
-                for (l = k + 1; l <= 9; l++)
-                {
-                    putchar(i + '0');
-                    putchar(',');
-                    putchar(' ');
-                    putchar(j + '0');
-                    putchar(',');
-                    putchar(' ');
-                    putchar(k + '0');
-                    putchar(',');
-                    putchar(' ');
-                    putchar(l + '0');
-                    putchar(',');
-                    putchar(' ');
-                }
-            }
-        }
-    }
-
-    return (0);
+  for (d = '0'; d<= '9'; d++)
+  {
+  putchar(d);
+  if (d != '9')
+  {
+    putchar(',');
+    putchar(' ');
+  }
+  }
+  putchar('\n');
+  return (0);
 }
