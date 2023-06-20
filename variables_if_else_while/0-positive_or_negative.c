@@ -12,22 +12,20 @@
  */
 int main(void)
 {
-	int n;
+    int n;
 
-	srand(time(0)); /* Seed the random number generator with current time */
+    srand(time(0)); /* Seed the random number generator with current time */
 
-	n = rand() % 201 - 100; /* Generate a random number between -100 and 100 */
+    n = rand() % 201 - 100; /* Generate a random number between -100 and 100 */
 
-	printf("The number %d ", n);
+    printf("The number %d ", n);
 
-	if (n > 0)
-		printf("is positive");
-	else if (n == 0)
-		printf("is zero");
-	else
-		printf("is negative");
+    if (n > 0)
+        printf("is positive\n");
+    else if (n == 0)
+        printf("is zero\n");
+    else
+        printf("is negative\n");
 
-	printf("\n");
-
-	return (0);
+    return 0;
 }
