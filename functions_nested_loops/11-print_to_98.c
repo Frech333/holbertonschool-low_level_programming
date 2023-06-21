@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void print_to_98(int n); // Function prototype
+void print_to_98(int n); /* Function prototype */
 
 int main()
 {
