@@ -34,8 +34,7 @@ oclean:
 fclean: clean oclean
 
 re: fclean
-	$(CC) $(CFLAGS) -c $(SRC)
-	$(CC) $(OBJ) -o $(NAME)
+	$(MAKE) all
 
 # Pattern rule to compile source files
 %.o: %.c
