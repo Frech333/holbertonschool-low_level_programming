@@ -1,9 +1,9 @@
-CC = gcc
-CFLAGS = -Wall -Werror
+	CC = gcc
+	CFLAGS = -Wall -Werror
 
 school: main.c school.c
     $(CC) $(CFLAGS) -o school main.c school.c
 
 all: school
 
-.PHONY: all
+	.PHONY: all
