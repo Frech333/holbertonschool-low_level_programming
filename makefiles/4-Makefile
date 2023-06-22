@@ -1,24 +1,24 @@
-# Makefile
+# Makefile                                                                                           
 
-# Compiler
+# Compiler                                                                                           
 CC = gcc
 
-# Source files
+# Source files                                                                                       
 SRC = main.c m.h school.c
 
-# Object files (derived from source files)
+# Object files (derived from source files)                                                           
 OBJ = $(SRC:.c=.o)
 
-# Executable name
+# Executable name                                                                                    
 NAME = school
 
-# File deletion program
+# File deletion program                                                                              
 RM = rm -f
 
-# Compiler flags
+# Compiler flags                                                                                     
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-.PHONY: all clean oclean fclean re
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
@@ -26,16 +26,12 @@ $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) *~ $(NAME) $(OBJ)
 
-oclean:
-	$(RM) $(OBJ)
+fclean: clean
 
-fclean: clean oclean
+re: fclean all
 
-re: fclean
-	$(MAKE) all
-
-# Pattern rule to compile source files
+# Pattern rule to compile source files                                                               
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
