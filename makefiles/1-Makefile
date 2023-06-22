@@ -1,5 +1,5 @@
 CC = gcc
-src = main.c school.c
+SRC = main.c school.c
 
-all: $(src)
-	$(CC) $(src) -o school
+all: $(SRC)
+	$(CC) $(SRC) -o school
