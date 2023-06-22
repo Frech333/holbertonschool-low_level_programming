@@ -1,51 +1,38 @@
-# Makefile for school executable
+# Makefile                                                                                           
 
-# Compiler
-CC := gcc
+# Compiler                                                                                           
+CC = gcc
 
-# Source files
-SRC := main.c school.c
+# Source files                                                                                       
+SRC = main.c m.h school.c
 
-# Object files
-OBJ := $(SRC:.c=.o)
+# Object files (derived from source files)                                                           
+OBJ = $(SRC:.c=.o)
 
-# Executable name
-NAME := school
+# Executable name                                                                                    
+NAME = school
 
-# File deletion program
-RM := rm -f
+# File deletion program                                                                              
+RM = rm -f
 
-# Compiler flags
-CFLAGS := -Wall -Werror -Wextra -pedantic
+# Compiler flags                                                                                     
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
-# Default rule
+.PHONY: all clean fclean re
+
 all: $(NAME)
 
-# Rule to build the executable
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-# Rule to compile source files into object files
+clean:
+	$(RM) *~ $(NAME) $(OBJ)
+
+fclean: clean
+
+re: fclean
+	CC=$(CC) $(MAKE) all
+
+# Pattern rule to compile source files                                                               
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-
-# Rule to delete Emacs and Vim temporary files, the executable, and object files
-fclean: clean
-	$(RM) $(NAME)
-
-# Rule to delete object files
-oclean:
-	$(RM) $(OBJ)
-
-# Rule to delete Emacs and Vim temporary files along with the executable
-clean:
-	$(RM) $(OBJ) $(NAME) *~ .*~
-
-# Rule to force recompilation of all source files
-re: fclean all
-
-# Disable implicit rules
-.SUFFIXES:
-
-# Phony targets (rules that are not associated with a file)
-.PHONY: all clean oclean fclean re
