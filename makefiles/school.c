@@ -1,4 +1,4 @@
-#include "m.h"
+#include <stdio.h> // Include the necessary header file
 
 /**
  * print_school - print the logo of Holberton
