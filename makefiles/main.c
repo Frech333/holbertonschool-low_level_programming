@@ -1,12 +1,12 @@
-#include "m.h"
+// main.c
 
-/**
- * main - Entry point
- *
- * Return: Always 
- */
-int main(void)
-{
-	print_school();
-	return (EXIT_SUCCESS);
+#include <stdio.h>
+
+// Function declaration
+void print_school();
+
+int main() {
+    // Call the print_school function
+    print_school();
+    return 0;
 }
