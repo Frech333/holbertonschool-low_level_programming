@@ -1,4 +1,4 @@
-cc = gcc
+CC = gcc
 src = main.c school.c
 
 all: $(src)
