@@ -1,19 +1,12 @@
-#include <stdio.h>
-#include "main.h"
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-    int a = 98;
-    int b = 402;
-
-    printf("Before swap: a = %d, b = %d\n", a, b);
-    swap_int(&a, &b);
-    printf("After swap: a = %d, b = %d\n", a, b);
-
-    return 0;
-}
+int _putchar(char c);
+void reset_to_98(int *n);
+void swap_int(int *a, int *b);
+int _strlend(char *s);
+void _puts(char *str);
+void print_rev(char *s);
+void rev_string(char *s);
+void puts2(char *str);
+void puts_half(char *str);
+void print_array(int *a, int n);
+char *_strcpy(char *dest, char *src);
+int _atoi(char *s);
