@@ -1,13 +1,19 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include <stdio.h>
+#include "main.h"
 
-/* Function prototypes */
-void reset_to_98(int *n);
-void _puts(char *str);
-void puts2(char *str);
-/* Add other function prototypes here */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    int a = 98;
+    int b = 402;
 
-/* Prototype for _putchar */
-int _putchar(char c);
+    printf("Before swap: a = %d, b = %d\n", a, b);
+    swap_int(&a, &b);
+    printf("After swap: a = %d, b = %d\n", a, b);
 
-#endif /* MAIN_H */
+    return 0;
+}
