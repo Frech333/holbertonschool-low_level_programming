@@ -11,20 +11,20 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+    int i, j;
 
-	if (*needle == '\0')
-	  return (haystack);
+    if (*needle == '\0')
+        return (haystack);
 
-	for (i = 0; haystack[i] != '\0'; i++)
-	{
-		for (j = 0; haystack[i + j] == needle[j]; j++)
-		{
-			if (needle[j + 1] == '\0')
-			  return (&haystack[i]);
-		}
-	}
+    for (i = 0; haystack[i] != '\0'; i++)
+    {
+        for (j = 0; haystack[i + j] == needle[j]; j++)
+        {
+            if (needle[j + 1] == '\0')
+                return (&haystack[i]);
+        }
+    }
 
-	/* Substring not found, return NULL */
-	return (NULL);
+    /* Substring not found, return NULL */
+    return (NULL);
 }
