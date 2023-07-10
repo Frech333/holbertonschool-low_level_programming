@@ -10,7 +10,7 @@ unsigned int i;
 if (size == 0)
 return (NULL);
 
- array = (char *)malloc(sizeof(char) * size);
+array = (char *)malloc(sizeof(char) * size);
 
 if (array == NULL)
 return (NULL);
