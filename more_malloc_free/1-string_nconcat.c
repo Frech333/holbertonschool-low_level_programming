@@ -7,8 +7,8 @@
  * @s2: The second string
  * @n: The number of bytes from s2 to concatenate
  *
- * Return: Pointer to the concatenated string (s1 followed by the first n bytes 
- * of s2) If the function fails or if NULL is passed, it returns NULL.
+ * Return: Pointer to the concatenated string (s1 followed by the first n
+ * bytes of s2) If the function fails or if NULL is passed, it returns NULL.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
