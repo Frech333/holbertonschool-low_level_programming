@@ -4,9 +4,10 @@
 
 /**
  * malloc_checked - Allocates memory
- * @a: ther size to allocate
+ * @b: The size to allocate
  *
- * Return: Nothing.
+ * Return: Pointer to the allocated memory
+ *         If malloc fails, the function terminates the program with exit status 98.
  */
 void *malloc_checked(unsigned int b)
 {
@@ -15,5 +16,6 @@ p = malloc(b);
 
 if (p == NULL)
 exit(98);
+
 return (p);
 }
