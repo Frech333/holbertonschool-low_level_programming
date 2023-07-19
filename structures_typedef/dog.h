@@ -11,9 +11,9 @@
  * including its name, age, and owner.
  */
 struct dog {
-    char *name;
-    float age;
-    char *owner;
+char *name;
+float age;
+char *owner;
 };
 
 /**
