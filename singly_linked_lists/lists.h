@@ -6,6 +6,7 @@
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
+ * @len: lenght of the string (number of characters exluding null terminator)
  * @next: points to the next node
  *
  * Description: singly linked list node structure
