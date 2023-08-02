@@ -12,7 +12,7 @@ dlistint_t *current = head;
 int sum = 0;
 
 while (current != NULL)
-  {
+{
 sum += current->n; /* Add the data of the current node to the sum */
 current = current->next;
 }
