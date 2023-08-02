@@ -42,5 +42,5 @@ current = current->next;
 current->next = new_node;
 new_node->prev = current;
 
- return (new_node);
+return (new_node);
 }
