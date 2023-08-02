@@ -7,12 +7,14 @@
  *
  * Return: Address of the new element, or NULL if it failed
  */
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n) {
-    dlistint_t *new_node, *current;
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
+{
+dlistint_t *new_node, *current;
 
 /* Allocate memory for the new node */
 new_node = malloc(sizeof(dlistint_t));
-if (new_node == NULL) {
+if (new_node == NULL)
+{
 return (NULL); /* Allocation failed */
 }
 
@@ -21,7 +23,8 @@ new_node->n = n;
 new_node->next = NULL;
 
 /* Check if the list is empty */
-if (*head == NULL) {
+if (*head == NULL)
+{
 /* The new node becomes the first and last node */
 new_node->prev = NULL;
 *head = new_node;
