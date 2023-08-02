@@ -2,11 +2,8 @@
 #define LISTS_H
 
 #include <stdio.h>
-<<<<<<< HEAD
 #include <stdlib.h>
-=======
 #include <stddef.h> /* For size_t */
->>>>>>> 5784c0767e8abcec6bc393c3ed86b3c65ea101b4
 
 /**
  * struct dlistint_s - doubly linked list
